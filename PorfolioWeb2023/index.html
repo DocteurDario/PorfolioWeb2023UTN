@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Portfolio web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #183D3D;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            border: 2px solid rgb(19, 7, 18);
+            box-shadow: inset 0 0 5px blue, 0 0 15px rgb(69, 69, 110),0 0 30px rgb(95, 121, 168);
+            border-radius: 60px;
+            
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #053B50;
+            border-radius: 10px;
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .container-sin-marco {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .cuadro {
+            width: 300px; /* Establece el ancho del cuadro igual al ancho de la imagen */
+            padding: 20px;
+            background-color: #93B1A6;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .container-educacion {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #B0D9B1;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .container-tecnologia {
+            border: 2px solid rgb(19, 7, 18);
+            box-shadow: inset 0 0 5px blue, 0 0 15px rgb(69, 69, 110),0 0 30px rgb(95, 121, 168);
+            border-radius: 60px;
+
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #176B87;
+            /* border-radius: 10px; */
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+        }
+        .container-neon{
+            border: 2px solid white;
+            box-shadow: inset 0 0 5px blue, 0 0 10px blue;
+            border-radius: 60px;
+            max-width:950px;
+            margin: 30px;
+            text-align: -webkit-center;
+            color:white;
+        }
+
+        .container-neon-2{
+            border: 2px solid white; /* Borde sólido blanco */
+            box-shadow: inset 0 0 5px blue, 0 0 10px blue; /* Sombra en el interior del contenedor y sombra externa */
+            border-radius: 30px; /* Borde redondeado */
+            max-width: 350px; /* Ancho máximo del contenedor */
+            margin: 30px auto; /* Margen superior e inferior de 30px y margen horizontal automático */
+            padding: 20px; /* Espaciado interno de 20px */
+            text-align: center; /* Centra el texto horizontalmente en el contenedor */
+            color: white; /* Color del texto blanco */
+            margin: 0 auto; /* Establece el margen horizontal automático */
+            text-align: center; /* Centra el texto en el contenedor */
+        }
+
+        .text {
+            flex: 1;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        img {
+            max-width: 300px;
+            border-radius: 10px;
+        }
+        #imgen-2 {
+            max-width: 300px; /* Asegura que la imagen se ajuste al cuadro */
+            border-radius: 10px;
+        }
+        .education {
+            margin-bottom: 20px; /* Espacio entre las secciones de educación */
+        }
+        .icon {
+            width: 50px; /* Tamaño deseado para la imagen del icono */
+            height: auto; /* Esto mantiene la proporción original de la imagen */
+            margin-right: 10px; /* Espacio entre la imagen y el texto */
+        }
+        .table-container {
+            margin-top: 20px;
+            display: table;
+            width: 100%;
+        }
+
+        .table-row {
+            display: table-row;
+        }
+
+        .table-cell {
+            display: table-cell;
+            padding: 80px;
+            vertical-align: top;
+        }
+        
+         /* Estilos para la barra de navegación */
+         nav {
+            background-color: #053B50;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #93B1A6;
+        }
+
+        .pl-title {
+        font-size: 50px;
+        font-weight: 600;
+        }
+        
+
+        .pl {
+            padding: 50px 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .pl-texts {
+            width: 65%;
+        }
+
+        h1 {
+        color: rgb(36, 38, 158);
+        text-shadow: 0 0 10px #3f8dac,0 0 15px #68c0e2,0 0 30px #68c0e2, 0 0 40px #68c0e2;
+        }
+        .centrado {
+        text-align: center;
+        }
+
+        .boton-elegante {
+        background-color: #3498db; /* Color de fondo */
+        box-shadow: inset 0 0 5px blue, 0 0 10px blue; /* Sombra en el interior del contenedor y sombra externa */
+        color: #fff; /* Color del texto */
+        border: none; /* Elimina el borde */
+        padding: 10px 20px; /* Espaciado interno */
+        border-radius: 5px; /* Bordes redondeados */
+        cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+        font-size: 16px; /* Tamaño de fuente */
+        text-transform: uppercase; /* Convierte el texto a mayúsculas */
+        font-weight: bold; /* Texto en negrita */
+        transition: background-color 0.3s ease; /* Transición de color de fondo suave */
+        }   
+
+        .boton-elegante:hover {
+            background-color: #2980b9; /* Color de fondo al pasar el mouse */
+        }
+
+    </style>
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script> <!-- Agregamos el script de Email.js -->
+
+</head>
+<body>
+    <form id="formulario-contacto">
+        <!-- Campos del formulario -->
+        <button class="boton-elegante">Enviar</button>
+    </form>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script> <!-- Agregamos el script de Email.js -->
+    <script>
+        // Configura Email.js con tus credenciales
+        emailjs.init("service_o5hpowr"); // Reemplaza "tuUserId" con tu User ID de Email.js
+
+        // Maneja el envío del formulario
+        document.getElementById("formulario-contacto").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Obtiene los datos del formulario
+            const correo = document.getElementById("correo").value;
+            const asunto = document.getElementById("asunto").value;
+            const mensaje = document.getElementById("mensaje").value;
+
+            // Envía el correo a través de Email.js
+            emailjs.send("service_o5hpowr", "template_atxfz6l", {
+                from_email: correo,
+                to_email: "docteurdario@gmail.com", // Reemplaza con tu dirección de Gmail
+                subject: asunto,
+                message: mensaje
+            }).then(function(response) {
+                console.log("Correo enviado con éxito", response);
+                alert("Correo enviado con éxito");
+                // Puedes redirigir a una página de confirmación aquí si lo deseas
+            }, function(error) {
+                console.error("Error al enviar el correo", error);
+                alert("Error al enviar el correo");
+            });
+        });
+    </script>
+
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#acerca-de">Acerca de mí</a></li>
+            <li><a href="#trabajos">Proyectos</a></li>
+            <li><a href="#educacion">Educación</a></li>
+            <li><a href="#tecnologias">Tecnologías</a></li>
+            <li><a href="#Contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    <div class="container-sin-marco"></div>
+    <div id="inicio" class="container">
+        <div class="text">
+            <h2>Bienvenidos, mi nombre es:</h2>
+            <h1 class="pl-title">Darío Docteur</h1>
+            <p>Soy un apasionado desarrollador FullStack con un firme compromiso con el aprendizaje continuo y la búsqueda del conocimiento. Mi objetivo es dedicarme por completo al campo de la programación en el futuro.</p>
+        </div>
+        <div>
+            <img src="Foto-Dario.jpeg" alt="Foto de Darío">
+        </div>
+    </div>
+    
+    <div>
+        <div id="acerca-de" class="container-sin-marco">
+            <div class="cuadro">
+                <img id="imgen-2" src="Foto-Dario-2.jpeg" alt="Foto de Darío" >
+            </div>
+            <div  class="text">
+                <h1 class="pl-title">Acerca de mí</h1>
+                <h2> Estudiante de Tecnicatura universitaria en programación</h2>
+                <p>Soy un estudiante de programación con una sólida formación y avanzado conocimiento en el campo. Mi pasión por la tecnología y el desarrollo de software me impulsa a buscar nuevas oportunidades laborales que me permitan poner en práctica mis habilidades y seguir creciendo profesionalmente. Considero la responsabilidad y la organización como pilares fundamentales en mi trabajo, lo que me permite enfrentar desafíos con eficiencia y precisión. Estoy entusiasmado por encontrar mi próxima experiencia laboral y seguir aprendiendo en el mundo de la programación.</p>
+            </div>    
+        </div>
+    </div>
+    <div class="container-tecnologia">
+        <div id="trabajos" > </div>
+            <div class="pl">
+                <div class="pl-texts">
+                    <h1 class="pl-title centrado"> Te invito a ver mis Proyectos: </h1>
+                </div>
+                    <div class="table-row">
+                        <div class= "table-cell container-neon"> 
+                            <h3> PAGA TU PARTE</h3>
+                            <p>Este sistema de gestión está diseñado para administrar gastos compartidos, siendo útil tanto en reuniones como en viajes en grupo. Permite registrar los gastos y, al finalizar, realiza los cálculos necesarios para determinar qué persona debe dinero a las otras para equilibrar las cuentas y garantizar que todos contribuyan de manera equitativa. Además, la aplicación también brinda la capacidad de consultar todos los gastos de una persona, sin importar si se originaron en reuniones, viajes o gastos comunes, proporcionando una visión completa de los registros financieros.</p>
+                            <img src="GastosMenu.jpg">
+                            <img src="Reporte_Reunion.jpg">
+                            <img src="Reporte_Reunion2.jpg">
+                        </div>
+                        <div class= "table-cell container-neon">
+                            <h3> GESTIÓN DE PRODUCTOS CON CATÁLOGO  </h3>
+                            <p>Este proyecto es una aplicación de escritorio para la gestión de productos con catálogo. Cuenta con la siguientes funcionalidades: Listado de Artículos, Búsqueda Avanzada (utilizando criterios como nombre, categoría, marca, precio, y más), agregar productos con su: nombre, descripción, marca, categoría, imágenes y precio; ademas cuenta con las funcionalidad de: Editar aeticulo, eliminar articulo y sus imagenes, mostrar detalles de productos con sus imágenes, cuenta con gestión de Marcas y Categorías. </p>
+                            </ul>
+                            <img src="ABM-Listar.jpg">
+                            <img src="ABM-Detalle.jpg">
+                            <img src="ABM-Agregar-Imagen.jpg">
+                            </p> 
+                        </div>                             
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>     
+    <div class="container-sin-marco"></div>       
+    <div id="educacion" class="container-educacion">
+        <div class="education">
+            <h1 class="pl-title centrado">Educación:</h1>
+            <h2>
+                <img src="https://www.frgp.utn.edu.ar/public/frontend/assets/img/logo-footer.png" class="icon">
+                Universidad Tecnológica Nacional
+            </h2>
+            <p>• Técnico Universitario En Programación, 2021 - a la actualidad.</p>
+            <p>• Gral Pacheco, Buenos Aires.</p>
+            <p>• Promedio: 8,86. Materias: 15 aprobadas, 1 regular de un total de 21.</p>
+        </div>
+       
+        <div class="education">
+            <h2>
+                <img src="https://media.licdn.com/dms/image/C4D0BAQF36oHEnG2XdA/company-logo_200_200/0/1648975753324?e=1703721600&v=beta&t=OW-3iITWeBI2moEBd2ohURrov6Wq-Mfp4VkJGDdAL1g" class="icon">
+                Universidad Nacional de Luján
+            </h2>
+            <p>• Contador Público, 2011 - 2013</p>
+            <p>• San Miguel, Buenos Aires.</p>
+            <p>• Promedio: 8,16. Materias: 10 aprobadas.</p>
+            <p>Aunque no me gradué, adquirí valiosos conocimientos, me proporcionó una sólida base en áreas como: contabilidad, auditoría, impuestos y gestión empresarial.</p>
+        </div>
+
+        <div class="education">
+            <h2>                
+                <img src="https://scontent.fepa9-2.fna.fbcdn.net/v/t39.30808-6/318315107_688230292812603_2004600635255014109_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=a2f6c7&_nc_eui2=AeG8RQ9oDOEyIcK9kHcdEckL9_JzPDGYSt_38nM8MZhK3yL_KcR-HVdDDN9nBhUuqwA&_nc_ohc=gFQGCdDFQbQAX9kS407&_nc_ht=scontent.fepa9-2.fna&oh=00_AfA7SWbmPfpkSRYsTTbzCp1OkUZa9pwj1L04LBMEVU0jlw&oe=6524D503" class="icon">
+                Escuela Secundaria Instituto Cristo Rey
+            </h2>
+            <p>• Bachillerato en Ciencias Sociales y Humanidades.</p>
+            <p>• José C. Paz, Buenos Aires.</p>
+            <p>• Promedio: 7,82. </p>
+        </div>
+    </div>
+    <div class="container-sin-marco "> </div>
+        <div id="tecnologias" class="container-tecnologia table-container">
+            <h1 class="pl-title centrado">Tecnologías:</h1>
+            <div>
+                <div class="table-row">
+                    <div class="table-cell">
+                        <h2>Lenguajes de Programación:</h2>
+                        <p>• C</p>
+                        <p>• C++</p>
+                        <p>• C#</p>
+                        <p>• T-SQL</p>
+                    </div>
+                    <div class="table-cell">
+                        <h2>Bibliotecas y Frameworks:</h2>
+                        <p>• .NET</p>
+                        <p>• HTML</p>
+                        <p>• CSS</p>
+                        <p>• JavaScript</p>
+                        <p>• Bootstrap</p>
+                    </div>
+                    <div class="table-cell">
+                        <h2>Plataformas:</h2>
+                        <p>• Visual Studio Community 2022</p>
+                        <p>• Visual Studio Code</p>
+                        <p>• GitHub</p>
+                        <p>• Git</p>
+                        <p>• SQL Server</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-sin-marco"> </div>
+        
+        <div id="Contacto" class="container table-container" style="text-align: center;">
+            <h1 class="pl-title " style="text-align: center;" >Puedes contactarme a través de:</h1> 
+                <div>      
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="container-neon-2">
+                                <div class="social-icons">
+                                    <br>
+                                    <a href="https://www.linkedin.com/in/dar%C3%ADo-docteur-1521b045/" target="_blank"><i class="fab fa-linkedin" style="font-size: 2em;"></i></a>
+                                    <br>
+                                    <br>
+                                    <a href="https://www.instagram.com/dariogastondocteur?utm_source=qr" target="_blank"><i class="fab fa-instagram" style="font-size: 2em;"></i></a>
+                                    <br>
+                                    <br>
+                                    <a href="https://github.com/DocteurDario" target="_blank"><i class="fab fa-github" style="font-size: 2em;"></i></a>
+                                    <br>
+                                    <br>
+                                    <a href="https://www.facebook.com/Docteur1985/" target="_blank"><i class="fab fa-facebook" style="font-size: 2em;"></i></a>
+                                    <br>
+                                    <br>
+                                    <a href="https://wa.me/5491169334190" target="_blank"><i class="fab fa-whatsapp" style="font-size: 2em;"></i></a>
+                                    <br>
+                                    <br>
+                                    <a href="mailto:docteurdario@gmail.com" ><i class="far fa-envelope" style="font-size: 2em"></i> </a>
+                                    <br>
+                                    <i class="fas fa-map-marker-alt" style="font-size: 2em"></i> José C. Paz, Buenos Aires, Argentina.
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="table-cell">
+                            <div class="container-neon-2">
+                                <form>
+                                    <div style="margin-top: 20px;">
+                                        <label for="correo" style="display: inline-block; width: 150px;">Tu Correo Electrónico:</label>
+                                        <input type="email" id="correo" name="correo" style="width: 100%;">
+                                    </div>
+                                    <div style="margin-top: 20px;">
+                                        <label for="asunto" style="display: inline-block; width: 150px;">Asunto:</label>
+                                        <input type="text" id="asunto" name="asunto" style="width: 100%;">
+                                    </div>
+                                    <div style="margin-top: 20px;">
+                                        <label for="mensaje" style="display: inline-block; width: 150px;">Mensaje:</label>
+                                        <textarea id="mensaje" name="mensaje" rows="6" style="width: 100%;"></textarea>
+                                    </div>
+                                    <div style="margin-top: 20px; text-align: center;">
+                                    <form id="formulario-contacto">
+                                        
+                                            <button class="boton-elegante">Enviar</button>
+                                        
+                                    </form>
+                                </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+        </div>
+       
+    <div class="container-sin-marco"></div>
+</body>
+<header style="background-color: black; padding: 10px 0; text-align: center; color: white;">
+    <div style="margin-top: 10px;">
+        <p>&copy; 2023 Darío Docteur. Todos los derechos reservados.</p>
+    </div>    
+</header>
+
+</html>
